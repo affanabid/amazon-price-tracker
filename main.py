@@ -4,8 +4,8 @@ from selenium.webdriver.common.by import By
 import smtplib
 
 # storing the credentials as constants to access gmail accound
-MY_EMAIL = "affan.works31@gmail.com"
-MY_PASSWORD = "ripulmgqsuyhybju"
+MY_EMAIL = "your-gmail-here"
+MY_PASSWORD = "your-gmail-password-here"
 
 # setting up the chrome driver to access the desired website and scrape desired data
 chrome_driver_path = 'C:/Users/acer/Desktop/udemy-class/Day-48-Selenium/chromdriver.exe'
@@ -24,7 +24,7 @@ if price < 80:
         connection.starttls()
         connection.login(user=MY_EMAIL, password=MY_PASSWORD)
         connection.sendmail(from_addr=MY_EMAIL,
-                                to_addrs='affan.abid99@gmail.com',
+                                to_addrs='recipient-email-here',
                                 msg=f'Subject:Amazon product price declined\n\nThe price of the product you wanted to buy has declined and now lies in your budget range.\nPrice now {price}.')
 
 else:
